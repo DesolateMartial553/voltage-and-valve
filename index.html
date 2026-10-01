@@ -519,13 +519,15 @@
           <p class="info-card__item">🕐 Mon–Fri 7:30am–6pm · Emergency line 24/7</p>
           <p class="info-card__item">🗺️ Areas covered: Leeds, Wakefield, Bradford, Huddersfield and nearby</p>
         </div>
-        <div class="map-embed">
-          <iframe
-            title="Map of the Leeds service area"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=-1.6700%2C53.7500%2C-1.4400%2C53.8600&layer=mapnik&marker=53.8008%2C-1.5491"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+        <div class="map-embed" id="mapEmbed" data-map-src="https://www.openstreetmap.org/export/embed.html?bbox=-1.6700%2C53.7500%2C-1.4400%2C53.8600&amp;layer=mapnik&amp;marker=53.8008%2C-1.5491" data-map-title="Map of the Leeds service area">
+          <div class="map-facade">
+            <p class="map-facade__name">Voltage &amp; Valve</p>
+            <p class="map-facade__addr">24 Ironbridge Way, Leeds, LS10 1AB</p>
+            <div class="map-facade__actions">
+              <button type="button" class="btn btn--accent map-facade__btn">Show map</button>
+              <a class="map-facade__link" href="https://www.google.com/maps/search/?api=1&amp;query=Voltage+%26+Valve+Leeds" target="_blank" rel="noopener">Get directions</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -201,3 +201,20 @@
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 })();
+
+/* Map facade: load the map only on click */
+(function () {
+  var box = document.getElementById("mapEmbed");
+  if (!box) return;
+  var btn = box.querySelector(".map-facade__btn");
+  if (!btn) return;
+  btn.addEventListener("click", function () {
+    var frame = document.createElement("iframe");
+    frame.title = box.getAttribute("data-map-title") || "Map";
+    frame.src = box.getAttribute("data-map-src");
+    frame.loading = "lazy";
+    frame.referrerPolicy = "no-referrer-when-downgrade";
+    box.textContent = "";
+    box.appendChild(frame);
+  });
+})();
