@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# PLACEHOLDER: real domain needed once hosted
+Sitemap: https://voltage-and-valve.example/sitemap.xml
