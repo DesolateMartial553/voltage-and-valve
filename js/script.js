@@ -139,7 +139,7 @@
     );
   }
 
-  /* ---------- Quote form (client-side demo) ---------- */
+  /* ---------- Quote form (demo only: nothing is sent) ---------- */
   const form = document.getElementById("quoteForm");
   const note = document.getElementById("formNote");
   if (form && note) {
@@ -152,18 +152,8 @@
         return;
       }
       note.classList.remove("is-error");
-      const submitBtn = document.getElementById("quoteSubmit");
-      const name = document.getElementById("name").value.trim().split(" ")[0];
-      submitBtn.disabled = true;
-      submitBtn.textContent = "Sending…";
-
-      setTimeout(() => {
-        note.textContent =
-          "Thanks" + (name ? ", " + name : "") + " — your request has been received. We'll be in touch shortly.";
-        submitBtn.disabled = false;
-        submitBtn.textContent = "Send Request";
-        form.reset();
-      }, 700);
+      note.textContent =
+        "This is a demo site — in a live build this form would send your enquiry to the business.";
     });
   }
 
