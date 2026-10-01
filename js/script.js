@@ -1,27 +1,53 @@
 (function () {
   "use strict";
 
+  document.documentElement.classList.add("js");
+
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const scrollBehavior = prefersReducedMotion ? "auto" : "smooth";
 
   /* ---------- Mobile nav ---------- */
   const navToggle = document.getElementById("navToggle");
   const nav = document.getElementById("site-nav");
+  // Must match the breakpoint where the CSS collapses the nav into the burger menu
+  const desktopNav = window.matchMedia("(min-width: 1101px)");
 
-  function closeNav() {
-    nav.classList.remove("is-open");
-    navToggle.classList.remove("is-open");
-    navToggle.setAttribute("aria-expanded", "false");
+  function setNav(open, returnFocus) {
+    nav.classList.toggle("is-open", open);
+    navToggle.classList.toggle("is-open", open);
+    navToggle.setAttribute("aria-expanded", String(open));
+    if (open) {
+      const first = nav.querySelector("a");
+      if (first) first.focus();
+    } else if (returnFocus) {
+      navToggle.focus();
+    }
   }
 
   if (navToggle && nav) {
     navToggle.addEventListener("click", () => {
-      const isOpen = nav.classList.toggle("is-open");
-      navToggle.classList.toggle("is-open", isOpen);
-      navToggle.setAttribute("aria-expanded", String(isOpen));
+      setNav(!nav.classList.contains("is-open"), false);
     });
 
     nav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", closeNav);
+      link.addEventListener("click", () => setNav(false, false));
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && nav.classList.contains("is-open")) {
+        setNav(false, true);
+      }
+    });
+
+    // Tabbing out of the open menu closes it rather than leaving focus behind it
+    document.addEventListener("focusin", (e) => {
+      if (nav.classList.contains("is-open") && !nav.contains(e.target) && e.target !== navToggle) {
+        setNav(false, false);
+      }
+    });
+
+    desktopNav.addEventListener("change", (e) => {
+      if (e.matches) setNav(false, false);
     });
   }
 
@@ -46,7 +72,7 @@
   const backToTop = document.getElementById("backToTop");
   if (backToTop) {
     backToTop.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
+      window.scrollTo({ top: 0, behavior: scrollBehavior });
     });
   }
 
@@ -108,35 +134,49 @@
   const dotsWrap = document.getElementById("testimonialDots");
   if (track && dotsWrap) {
     const slides = Array.from(track.children);
-    const perView = window.matchMedia("(min-width: 760px)").matches ? 2 : 1;
-    const dotCount = Math.max(1, slides.length - perView + 1);
+    const twoUp = window.matchMedia("(min-width: 760px)");
+    let dots = [];
 
-    for (let i = 0; i < dotCount; i++) {
-      const dot = document.createElement("button");
-      dot.type = "button";
-      dot.setAttribute("aria-label", "Go to review " + (i + 1));
-      if (i === 0) dot.classList.add("is-active");
-      dot.addEventListener("click", () => {
-        const slideWidth = slides[0].getBoundingClientRect().width + 24;
-        track.scrollTo({ left: i * slideWidth, behavior: prefersReducedMotion ? "auto" : "smooth" });
-      });
-      dotsWrap.appendChild(dot);
+    function slideStep() {
+      return slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : track.clientWidth;
     }
 
-    const dots = Array.from(dotsWrap.children);
+    function updateActive() {
+      const index = Math.round(track.scrollLeft / slideStep());
+      dots.forEach((d, i) => d.classList.toggle("is-active", i === index));
+    }
+
+    function buildDots() {
+      const perView = twoUp.matches ? 2 : 1;
+      const dotCount = Math.max(1, slides.length - perView + 1);
+      dotsWrap.textContent = "";
+      dots = [];
+      for (let i = 0; i < dotCount; i++) {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.setAttribute("aria-label", "Go to review " + (i + 1));
+        dot.addEventListener("click", () => {
+          track.scrollTo({ left: i * slideStep(), behavior: scrollBehavior });
+        });
+        dotsWrap.appendChild(dot);
+        dots.push(dot);
+      }
+      updateActive();
+    }
+
     let scrollTimeout;
     track.addEventListener(
       "scroll",
       () => {
         clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(() => {
-          const slideWidth = slides[0].getBoundingClientRect().width + 24;
-          const index = Math.round(track.scrollLeft / slideWidth);
-          dots.forEach((d, i) => d.classList.toggle("is-active", i === index));
-        }, 80);
+        scrollTimeout = setTimeout(updateActive, 80);
       },
       { passive: true }
     );
+
+    twoUp.addEventListener("change", buildDots);
+    window.addEventListener("resize", updateActive);
+    buildDots();
   }
 
   /* ---------- Quote form (demo only: nothing is sent) ---------- */
