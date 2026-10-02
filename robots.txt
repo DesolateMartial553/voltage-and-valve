@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# PLACEHOLDER: real domain needed once hosted
-Sitemap: https://voltage-and-valve.example/sitemap.xml
+Sitemap: https://desolatemartial553.github.io/voltage-and-valve/sitemap.xml
