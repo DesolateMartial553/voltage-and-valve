@@ -483,3 +483,6 @@ main[id], section[id]{ scroll-margin-top: var(--header-h); }
 .map-facade__actions{ display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:4px 18px; }
 .map-facade__btn{ cursor:pointer; min-height:44px; }
 .map-facade__link{ color: var(--amber); font-weight:600; font-size:.92rem; display:inline-flex; align-items:center; min-height:44px; }
+
+/* Footer privacy link: underlined so it is not distinguished by colour alone */
+footer a[href="privacy.html"]{text-decoration:underline; text-underline-offset:3px;}
