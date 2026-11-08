@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-gAIMlo4uHwea7LDSu/hGhLXHg8Iu/WQoVQvXGVLwabA='; style-src 'self'; img-src 'self' data:; font-src 'self'; frame-src https://www.openstreetmap.org; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-gAIMlo4uHwea7LDSu/hGhLXHg8Iu/WQoVQvXGVLwabA=' 'sha256-/x7W7R75k8Roq0WaVRQX9blP4OufE5xbAdzklGxsgpw='; style-src 'self'; img-src 'self' data:; font-src 'self'; frame-src https://www.openstreetmap.org; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <script>if (window.top !== window.self) { try { window.top.location.replace(window.self.location.href); } catch (e) { document.documentElement.hidden = true; } }</script>
+<script>document.documentElement.classList.add('js');</script>
 <title>Plumber &amp; Electrician in Leeds | Voltage &amp; Valve</title>
 <meta name="description" content="Voltage &amp; Valve: Gas Safe and NICEIC plumbers and electricians in Leeds. Boilers, rewires, landlord certificates and 24/7 emergency call-outs." />
 <link rel="canonical" href="https://desolatemartial553.github.io/voltage-and-valve/" />
@@ -37,7 +38,7 @@
   "areaServed": ["Leeds", "Wakefield", "Bradford", "Huddersfield"]
 }
 </script>
-<meta name="theme-color" content="#0a0e16" />
+<meta name="theme-color" content="#0A1020" />
 <meta name="color-scheme" content="dark" />
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="fonts/fonts.css" />
@@ -45,270 +46,407 @@
 </head>
 <body>
 
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg class="sr-only" aria-hidden="true" focusable="false" width="0" height="0">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 2c3 4 7 8.2 7 12.5A7 7 0 0 1 5 14.5C5 10.2 9 6 12 2z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="m9 4 6 2 6-2v16l-6 2-6-2-6 2V6l6-2z"/><path d="M9 4v16M15 6v16"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 20V5m-6 6 6-6 6 6"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M20.6 13.4 12 22l-9-9V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol>
+</svg>
 
 <!-- Emergency bar -->
 <div class="topbar">
-  <div class="wrap topbar__inner">
-    <p><span class="pulse-dot" aria-hidden="true"></span> 24/7 Emergency Call-Outs — Electrical &amp; Plumbing</p>
-    <a href="tel:+441134960789" class="topbar__phone">📞 0113 496 0789</a>
+  <div class="wrap topbar__in">
+    <p class="topbar__status"><span class="dot dot--pulse" aria-hidden="true"></span>24/7 emergency call-outs — electrical &amp; plumbing</p>
+    <a class="topbar__tel" href="tel:+441134960789"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>0113 496 0789</a>
   </div>
 </div>
 
 <!-- Header -->
-<header class="site-header" id="site-header">
-  <div class="wrap header__inner">
-    <a href="#main" class="brand" aria-label="Voltage & Valve home">
-      <span class="brand__mark" aria-hidden="true">
-        <svg viewBox="0 0 48 48" width="34" height="34">
-          <path d="M26 2 8 26h12l-4 20 22-26H26z" fill="url(#gradBolt)"/>
-          <path d="M14 34c4-4 8-4 12 0s8 4 12 0" stroke="#ffb454" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"/>
-          <defs>
-            <linearGradient id="gradBolt" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#6fc3ff"/>
-              <stop offset="1" stop-color="#4da3ff"/>
-            </linearGradient>
-          </defs>
-        </svg>
-      </span>
-      <span class="brand__text">Voltage<span class="brand__amp">&amp;</span>Valve</span>
+<header class="site" id="siteHeader">
+  <div class="wrap site__in">
+    <a class="brand" href="#main">
+      <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+        <path d="M23 4 10.5 21.5H18L16 36 29 18h-7.5z" fill="currentColor"/>
+        <path d="M6 33.5h6M28 33.5h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".75"/>
+        <circle cx="20" cy="33.5" r="3.4" fill="none" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      <span class="brand__name">Voltage<span class="brand__amp">&amp;</span>Valve</span>
+      <span class="brand__sub">Leeds</span>
     </a>
 
-    <nav class="nav" id="site-nav" aria-label="Primary">
+    <nav class="nav" id="siteNav" aria-label="Main">
       <ul>
         <li><a href="#services">Services</a></li>
-        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#why-us">Why us</a></li>
         <li><a href="#landlords">Landlords</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
-    <div class="header__actions">
-      <a href="#contact" class="btn btn--accent">Get Free Quote</a>
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+    <a class="btn btn--cta site__cta" href="tel:+441134960789"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call 0113 496 0789</a>
+
+    <button class="burger" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu">
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+    </button>
   </div>
 </header>
 
-<main id="main">
+<main id="main" tabindex="-1">
 
-  <!-- Hero -->
+  <!-- Hero: the price card is the hero -->
   <section class="hero">
-    <div class="hero__glow hero__glow--1" aria-hidden="true"></div>
-    <div class="hero__glow hero__glow--2" aria-hidden="true"></div>
-    <div class="wrap hero__inner">
-      <div class="hero__content reveal">
-        <p class="eyebrow">Certified · Insured · Local to West Yorkshire</p>
-        <h1>Electrical &amp; plumbing work, <span class="text-gradient">done properly</span> the first time.</h1>
-        <p class="hero__lede">From fuse box upgrades to burst pipes, our NICEIC and Gas Safe registered engineers handle domestic and commercial jobs across Leeds, Wakefield and the surrounding areas — with transparent pricing and no callout surprises.</p>
-        <div class="hero__ctas">
-          <a href="tel:+441134960789" class="btn btn--accent btn--lg">📞 Call and book now: 0113 496 0789</a>
-          <a href="#contact" class="btn btn--outline btn--lg">Request a callback</a>
+    <div class="wrap hero__grid">
+
+      <div class="hero__copy">
+        <h1 class="hero__title">
+          <span class="ln">Electrical <span class="amp">&amp;</span></span>
+          <span class="ln">plumbing,</span>
+          <span class="ln">done properly</span>
+          <span class="ln">first time.</span>
+        </h1>
+        <p class="hero__lede">NICEIC and Gas Safe registered engineers for Leeds, Wakefield and the rest of West Yorkshire. Fuse boards, rewires, boilers and burst pipes — with the price agreed before we start.</p>
+        <div class="hero__actions">
+          <a class="btn btn--cta btn--lg" href="tel:+441134960789"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call for a free quote</a>
+          <a class="tlink" href="#contact">Or send the form <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
-        <ul class="trust-row">
+        <ul class="hero__trust">
           <!-- PLACEHOLDER: confirm NICEIC / Gas Safe registration numbers and insurance before pitching -->
-          <li>⚡ NICEIC Approved</li>
-          <li>🔧 Gas Safe Registered</li>
-          <li>🛡️ Fully Insured</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg>NICEIC approved</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-drop"/></svg>Gas Safe registered</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg>Fully insured</li>
           <!-- /PLACEHOLDER -->
-          <li>🚨 24/7 emergency line</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>24/7 emergency line</li>
         </ul>
       </div>
 
-      <div class="hero__panel reveal">
-        <div class="panel-card price-card">
-          <p class="price-card__title">Typical prices — no surprises</p>
+      <div class="hero__panel">
+        <svg class="trace" viewBox="0 0 700 620" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="#FFB020" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+            <path class="wire" d="M44 150H110"/>
+            <path class="flow" d="M44 150H110"/>
+            <path class="wire" d="M300 0v44l36 36v60"/>
+            <path class="flow flow--2" d="M300 0v44l36 36v60"/>
+            <circle cx="336" cy="80" r="3.5" fill="#FFB020" stroke="none"/>
+          </g>
+          <g fill="none" stroke="#C87533" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+            <path class="wire" d="M700 250H560"/>
+          </g>
+          <g class="pipe" fill="none" stroke="#3FD0FF" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+            <path class="wire" d="M676 450v-150h-116"/>
+            <path class="flow flow--2" d="M676 450v-150h-116"/>
+            <circle cx="660" cy="300" r="3.5" fill="#3FD0FF" stroke="none"/>
+          </g>
+          <g>
+            <rect x="4" y="130" width="40" height="40" rx="10" fill="#0D1728" stroke="#C87533" stroke-width="1.5"/>
+            <path class="node node--e" d="M25 138 17 153h5l-1 9 9-13h-5z"/>
+            <rect x="656" y="450" width="40" height="40" rx="10" fill="#0D1728" stroke="#C87533" stroke-width="1.5"/>
+            <path class="node node--p" d="M676 458c4 5 7 8 7 11a7 7 0 0 1-14 0c0-3 3-6 7-11z"/>
+          </g>
+          <circle class="pulse pulse--a" r="4"/>
+          <circle class="pulse pulse--b" r="4"/>
+          <circle class="pulse pulse--p" r="4"/>
+        </svg>
+
+        <svg class="trace trace--mini" viewBox="0 0 600 64" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="#FFB020" stroke-linecap="round" stroke-linejoin="round">
+            <path class="wire" d="M0 18h190l30 30h58"/>
+            <path class="flow" d="M0 18h190l30 30h58"/>
+            <circle cx="278" cy="48" r="3.2" fill="#FFB020" stroke="none"/>
+          </g>
+          <g class="pipe" fill="none" stroke="#3FD0FF" stroke-linecap="round" stroke-linejoin="round">
+            <path class="wire" d="M600 18H410l-30 30h-58"/>
+            <path class="flow flow--2" d="M600 18H410l-30 30h-58"/>
+            <circle cx="322" cy="48" r="3.2" fill="#3FD0FF" stroke="none"/>
+          </g>
+          <circle class="pulse pulse--ma" r="3.5"/>
+          <circle class="pulse pulse--mp" r="3.5"/>
+        </svg>
+
+        <div class="price">
+          <div class="price__head">
+            <div>
+              <p class="price__label">Price list · Leeds</p>
+              <h2 class="price__title">Typical prices, no surprises</h2>
+            </div>
+            <p class="price__tag"><span class="dot" aria-hidden="true"></span>No hidden call-out fees</p>
+          </div>
           <!-- PLACEHOLDER: confirm all "from" prices with the business -->
-          <div class="panel-card__row">
-            <span class="panel-card__label">Call-out</span>
-            <span class="panel-card__value">from £30</span>
-          </div>
-          <div class="panel-card__row">
-            <span class="panel-card__label">Boiler service</span>
-            <span class="panel-card__value">from £50</span>
-          </div>
-          <div class="panel-card__row">
-            <span class="panel-card__label">Gas safety certificate (CP12)</span>
-            <span class="panel-card__value">from £40</span>
-          </div>
-          <div class="panel-card__row">
-            <span class="panel-card__label">EICR (electrical report)</span>
-            <span class="panel-card__value">from £150</span>
-          </div>
+          <ul class="price__rows">
+            <li><span class="price__name">Call-out</span><span class="price__lead" aria-hidden="true"></span><span class="price__val">from £30</span></li>
+            <li><span class="price__name">Boiler service</span><span class="price__lead" aria-hidden="true"></span><span class="price__val">from £50</span></li>
+            <li><span class="price__name">Gas safety certificate (CP12)</span><span class="price__lead" aria-hidden="true"></span><span class="price__val">from £40</span></li>
+            <li><span class="price__name">EICR (electrical report)</span><span class="price__lead" aria-hidden="true"></span><span class="price__val">from £150</span></li>
+          </ul>
           <!-- /PLACEHOLDER -->
-          <p class="price-card__note">Fixed written quote before any larger job starts.</p>
+          <p class="price__note"><svg class="ico" aria-hidden="true"><use href="#i-info"/></svg>Fixed written quote before any larger job starts.</p>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- Logos / strip -->
-  <section class="strip">
-    <div class="wrap strip__inner">
+  <!-- Ticker -->
+  <div class="ticker" aria-hidden="true">
+    <ul class="ticker__track">
       <!-- PLACEHOLDER: replace with owner-approved memberships, each with a registration number and verification link -->
-      <span>NICEIC</span><span>Gas Safe Register</span><span>Fully insured</span><span>Landlord certificates (CP12 &amp; EICR)</span>
+      <li>NICEIC</li><li>Gas Safe Register</li><li>Fully insured</li><li>Landlord certificates (CP12 &amp; EICR)</li>
       <!-- /PLACEHOLDER -->
-    </div>
-  </section>
+      <li>Leeds</li><li>Wakefield</li><li>Bradford</li><li>Huddersfield</li><li>24/7 call-outs</li>
+    </ul>
+    <ul class="ticker__track">
+      <!-- PLACEHOLDER: replace with owner-approved memberships, each with a registration number and verification link -->
+      <li>NICEIC</li><li>Gas Safe Register</li><li>Fully insured</li><li>Landlord certificates (CP12 &amp; EICR)</li>
+      <!-- /PLACEHOLDER -->
+      <li>Leeds</li><li>Wakefield</li><li>Bradford</li><li>Huddersfield</li><li>24/7 call-outs</li>
+    </ul>
+  </div>
 
-  <!-- Services -->
-  <section class="section" id="services">
+  <!-- 01 Services: two trades as one schematic -->
+  <section class="sec" id="services">
     <div class="wrap">
-      <div class="section__head reveal">
-        <p class="eyebrow">What we do</p>
-        <h2>Two trades, one reliable team</h2>
-        <p class="section__sub">We pair electrical and plumbing expertise so you deal with one company, not two — for repairs, installs and full renovations.</p>
+      <div class="sec__head">
+        <h2>Two trades, one team</h2>
+        <p class="sec__meta"><b>01</b><span class="bar" aria-hidden="true"></span>Services</p>
+        <p class="sec__sub">We pair electrical and plumbing expertise so you deal with one company, not two — for repairs, installs and full renovations.</p>
       </div>
 
-      <div class="service-grid">
-        <article class="service-card reveal">
-          <div class="service-card__icon service-card__icon--blue">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z" stroke-linejoin="round" stroke-linecap="round"/></svg>
-          </div>
-          <h3>Electrical Services</h3>
-          <p>Full and partial rewires, consumer unit upgrades, EV charger installs, lighting design, fault-finding and EICR certification for homes and businesses.</p>
-          <ul class="check-list">
-            <li>Rewires &amp; fuse box upgrades</li>
-            <li>EV charger installation</li>
-            <li>EICR testing &amp; certification</li>
-            <li>Lighting design &amp; smart controls</li>
-          </ul>
-          <a href="#contact" class="link-arrow">Request electrical work →</a>
-        </article>
+      <div class="trades">
+        <div class="trades__band" aria-hidden="true">
+          <svg viewBox="0 0 1200 160" preserveAspectRatio="none" focusable="false">
+            <g fill="none" stroke="#FFB020" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M0 44h190l36 36h374" opacity=".35"/>
+              <path d="M0 44h190l36 36h374" class="flow"/>
+              <path d="M120 44v116" opacity=".35"/>
+              <path d="M120 44v116" class="flow"/>
+            </g>
+            <g fill="none" stroke="#3FD0FF" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1200 44h-190l-36 36H600" opacity=".35"/>
+              <path d="M1200 44h-190l-36 36H600" class="flow flow--p"/>
+              <path d="M1080 44v116" opacity=".35"/>
+              <path d="M1080 44v116" class="flow flow--p"/>
+            </g>
+            <path d="M600 68l12 12-12 12-12-12z" fill="#C87533"/>
+            <path d="M600 92v68" fill="none" stroke="#C87533" stroke-width="2" opacity=".5"/>
+          </svg>
+        </div>
 
-        <article class="service-card reveal">
-          <div class="service-card__icon service-card__icon--amber">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2c3 4 7 8.2 7 12.5A7 7 0 0 1 5 14.5C5 10.2 9 6 12 2z" stroke-linejoin="round" stroke-linecap="round"/></svg>
-          </div>
-          <h3>Plumbing Services</h3>
-          <p>Boiler installs and servicing, leak detection, blocked drains, bathroom fit-outs and central heating — handled by Gas Safe registered engineers.</p>
-          <ul class="check-list">
-            <li>Boiler installs &amp; repairs</li>
-            <li>Leak detection &amp; repair</li>
-            <li>Bathroom &amp; kitchen plumbing</li>
-            <li>Blocked drains &amp; heating</li>
-          </ul>
-          <a href="#contact" class="link-arrow">Request plumbing work →</a>
-        </article>
+        <div class="trades__cols">
+          <article class="trade trade--e">
+            <div class="trade__top">
+              <span class="trade__icon"><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg></span>
+              <div>
+                <p class="trade__kicker">Electrical</p>
+                <h3>Rewires, fuse boards and EV chargers</h3>
+              </div>
+            </div>
+            <p>Full and partial rewires, consumer unit upgrades, EV charger installs, lighting design, fault-finding and EICR certification for homes and businesses.</p>
+            <ul class="trade__list">
+              <li>Rewires &amp; fuse box upgrades</li>
+              <li>EV charger installation</li>
+              <li>EICR testing &amp; certification</li>
+              <li>Lighting design &amp; smart controls</li>
+            </ul>
+            <a class="trade__link" href="#contact">Request electrical work <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </article>
 
-        <article class="service-card reveal">
-          <div class="service-card__icon service-card__icon--green">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z" stroke-linejoin="round" stroke-linecap="round"/></svg>
+          <article class="trade trade--p">
+            <div class="trade__top">
+              <span class="trade__icon"><svg class="ico" aria-hidden="true"><use href="#i-drop"/></svg></span>
+              <div>
+                <p class="trade__kicker">Plumbing</p>
+                <h3>Boilers, leaks and heating</h3>
+              </div>
+            </div>
+            <p>Boiler installs and servicing, leak detection, blocked drains, bathroom fit-outs and central heating — handled by Gas Safe registered engineers.</p>
+            <ul class="trade__list">
+              <li>Boiler installs &amp; repairs</li>
+              <li>Leak detection &amp; repair</li>
+              <li>Bathroom &amp; kitchen plumbing</li>
+              <li>Blocked drains &amp; heating</li>
+            </ul>
+            <a class="trade__link" href="#contact">Request plumbing work <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </article>
+        </div>
+
+        <div class="maint">
+          <div>
+            <h3>Planned maintenance</h3>
+            <p>Scheduled inspections, compliance certificates and reactive repair contracts for landlords, schools, retail units and commercial sites.</p>
           </div>
-          <h3>Planned Maintenance</h3>
-          <p>Scheduled inspections, compliance certificates and reactive repair contracts for landlords, schools, retail units and commercial sites.</p>
-          <ul class="check-list">
+          <ul class="maint__list">
             <li>Compliance &amp; safety checks</li>
             <li>Reactive repair contracts</li>
             <li>Landlord safety certificates</li>
             <li>Facilities maintenance plans</li>
           </ul>
-          <a href="#contact" class="link-arrow">Ask about a contract →</a>
-        </article>
+          <a class="tlink" href="#contact">Ask about a contract <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Why us -->
-  <section class="section section--alt" id="why-us">
+  <!-- 02 Why us: job sheet -->
+  <section class="sec sec--alt" id="why-us">
     <div class="wrap">
-      <div class="section__head reveal">
-        <p class="eyebrow">Why choose us</p>
+      <div class="sec__head">
         <h2>Straightforward trade work, no messing about</h2>
+        <p class="sec__meta"><b>02</b><span class="bar" aria-hidden="true"></span>Why us</p>
       </div>
 
       <!-- PLACEHOLDER: replace with a real quote and photo from the owner / engineers -->
-      <blockquote class="owner-quote reveal">
+      <blockquote class="quote rv">
         <p>“We'd rather turn up, tell you straight what's wrong and give you a price you can plan around than leave you guessing. That's how we'd want our own family treated.”</p>
         <footer>— The Voltage &amp; Valve team, Leeds</footer>
       </blockquote>
       <!-- /PLACEHOLDER -->
 
-      <div class="feature-grid">
-        <div class="feature reveal">
-          <div class="feature__icon">🛡️</div>
-          <h3>Certified &amp; insured</h3>
-          <p>Every engineer is NICEIC or Gas Safe registered and we carry £5m public liability cover on every job.</p>
+      <div class="feats">
+        <div class="feat rv">
+          <span class="feat__n" aria-hidden="true">01</span>
+          <div>
+            <h3>Certified &amp; insured</h3>
+            <p>Every engineer is NICEIC or Gas Safe registered and we carry £5m public liability cover on every job.</p>
+          </div>
         </div>
-        <div class="feature reveal">
-          <div class="feature__icon">💷</div>
-          <h3>Upfront pricing</h3>
-          <p>Fixed quotes before work starts, with "from" prices published above. No hidden call-out fees, no surprise invoices.</p>
+        <div class="feat rv">
+          <span class="feat__n" aria-hidden="true">02</span>
+          <div>
+            <h3>Upfront pricing</h3>
+            <p>Fixed quotes before work starts, with "from" prices published above. No hidden call-out fees, no surprise invoices.</p>
+          </div>
         </div>
-        <div class="feature reveal">
-          <div class="feature__icon">⏱️</div>
-          <h3>Fast response</h3>
-          <p>Same-day emergency call-outs across Leeds and Wakefield, average response time under 90 minutes.</p>
+        <div class="feat rv">
+          <span class="feat__n" aria-hidden="true">03</span>
+          <div>
+            <h3>Fast response</h3>
+            <p>Same-day emergency call-outs across Leeds and Wakefield, average response time under 90 minutes.</p>
+          </div>
         </div>
-        <div class="feature reveal">
-          <div class="feature__icon">✅</div>
-          <h3>5-year guarantee</h3>
-          <p>All installation work is backed by a written workmanship guarantee, parts and labour.</p>
+        <div class="feat rv">
+          <span class="feat__n" aria-hidden="true">04</span>
+          <div>
+            <h3>5-year guarantee</h3>
+            <p>All installation work is backed by a written workmanship guarantee, parts and labour.</p>
+          </div>
         </div>
       </div>
+
+      <!-- PLACEHOLDER: confirm trading years, job count and satisfaction figure with the business -->
+      <div class="readout rv">
+        <div><span class="readout__val"><span data-count="29">29</span><small>yrs</small></span><p>In West Yorkshire</p></div>
+        <div><span class="readout__val"><span data-count="7400">7400</span><small>+</small></span><p>Jobs completed</p></div>
+        <div><span class="readout__val"><span data-count="98">98</span><small>%</small></span><p>Customer satisfaction</p></div>
+        <div><span class="readout__val">24<small>/7</small></span><p>Emergency call-outs</p></div>
+      </div>
+      <!-- /PLACEHOLDER -->
     </div>
   </section>
 
-  <!-- Landlords -->
-  <section class="section" id="landlords">
+  <!-- 03 Certifications as stamped badges -->
+  <section class="sec" id="certification">
     <div class="wrap">
-      <div class="section__head reveal">
-        <p class="eyebrow">For landlords &amp; agents</p>
+      <div class="sec__head">
+        <h2>Registered, insured, accountable</h2>
+        <p class="sec__meta"><b>03</b><span class="bar" aria-hidden="true"></span>Certification</p>
+      </div>
+
+      <!-- PLACEHOLDER: confirm every registration and policy before pitching -->
+      <ul class="stamps rv">
+        <li class="stamp"><span class="stamp__in"><strong>NICEIC</strong><span>Approved</span></span></li>
+        <li class="stamp"><span class="stamp__in"><strong>Gas Safe</strong><span>Registered</span></span></li>
+        <li class="stamp"><span class="stamp__in"><strong>£5m</strong><span>Public liability</span></span></li>
+        <li class="stamp"><span class="stamp__in"><strong>5 year</strong><span>Workmanship</span></span></li>
+      </ul>
+      <!-- /PLACEHOLDER -->
+      <p class="certs__note"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg>Ask for our registration numbers and insurance certificate when you call — we'll send them before we start.</p>
+    </div>
+  </section>
+
+  <!-- 04 Landlords checklist board -->
+  <section class="sec sec--alt" id="landlords">
+    <div class="wrap">
+      <div class="sec__head">
         <h2>Landlord certificates, sorted in one visit</h2>
-        <p class="section__sub">Gas and electrical paperwork for let properties across Leeds and West Yorkshire — booked around your tenants, with the certificate emailed the same day.</p>
+        <p class="sec__meta"><b>04</b><span class="bar" aria-hidden="true"></span>Landlords</p>
+        <p class="sec__sub">Gas and electrical paperwork for let properties across Leeds and West Yorkshire — booked around your tenants, with the certificate emailed the same day.</p>
       </div>
-      <div class="landlord-grid">
-        <article class="landlord-card reveal">
-          <h3>CP12 gas safety record</h3>
-          <p class="landlord-card__price">from £40</p>
-          <p>The annual check required for every let property with a gas appliance. We test the boiler, hob and fire, then issue your CP12 for you to hand to tenants.</p>
-        </article>
-        <article class="landlord-card reveal">
-          <h3>EICR electrical report</h3>
-          <p class="landlord-card__price">from £150</p>
-          <p>A full inspection of wiring and consumer unit, with clear pass/fail coding and a quote for any remedial work. Needed at least every five years for rented homes.</p>
-        </article>
-        <article class="landlord-card reveal">
-          <h3>Reminders &amp; multi-property</h3>
-          <p class="landlord-card__price">Ask for a portfolio price</p>
-          <p>We note your renewal dates and get in touch before they lapse, and can book several properties into one day.</p>
-        </article>
+
+      <div class="board rv">
+        <!-- PLACEHOLDER: confirm certificate prices with the business -->
+        <ul class="board__list">
+          <li>
+            <span class="board__chk" aria-hidden="true"><svg class="ico"><use href="#i-check"/></svg></span>
+            <div class="board__body">
+              <h3>CP12 gas safety record</h3>
+              <p>The annual check required for every let property with a gas appliance. We test the boiler, hob and fire, then issue your CP12 for you to hand to tenants.</p>
+            </div>
+            <span class="board__price">from £40</span>
+          </li>
+          <li>
+            <span class="board__chk" aria-hidden="true"><svg class="ico"><use href="#i-check"/></svg></span>
+            <div class="board__body">
+              <h3>EICR electrical report</h3>
+              <p>A full inspection of wiring and consumer unit, with clear pass/fail coding and a quote for any remedial work. Needed at least every five years for rented homes.</p>
+            </div>
+            <span class="board__price">from £150</span>
+          </li>
+          <li>
+            <span class="board__chk" aria-hidden="true"><svg class="ico"><use href="#i-check"/></svg></span>
+            <div class="board__body">
+              <h3>Reminders &amp; multi-property</h3>
+              <p>We note your renewal dates and get in touch before they lapse, and can book several properties into one day.</p>
+            </div>
+            <span class="board__price">Portfolio price</span>
+          </li>
+        </ul>
+        <!-- /PLACEHOLDER -->
+        <div class="board__foot">
+          <a class="btn btn--cta" href="tel:+441134960789"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Book a certificate: 0113 496 0789</a>
+          <a class="tlink" href="#contact">Or request a callback <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
       </div>
-      <p class="landlord-cta reveal"><a href="tel:+441134960789" class="btn btn--accent">📞 Book a certificate: 0113 496 0789</a> <a href="#contact" class="link-arrow">Or request a callback →</a></p>
     </div>
   </section>
 
-  <!-- Process -->
-  <section class="section">
+  <!-- 05 Process -->
+  <section class="sec" id="process">
     <div class="wrap">
-      <div class="section__head reveal">
-        <p class="eyebrow">How it works</p>
+      <div class="sec__head">
         <h2>From call to completion</h2>
+        <p class="sec__meta"><b>05</b><span class="bar" aria-hidden="true"></span>How it works</p>
       </div>
 
-      <ol class="process">
-        <li class="process__step reveal">
-          <span class="process__num">01</span>
+      <ol class="proc">
+        <li class="proc__step rv">
+          <span class="proc__n" aria-hidden="true">01</span>
           <h3>Get in touch</h3>
           <p>Call, message, or fill in the quote form with the details of your job.</p>
         </li>
-        <li class="process__step reveal">
-          <span class="process__num">02</span>
+        <li class="proc__step rv">
+          <span class="proc__n" aria-hidden="true">02</span>
           <h3>Free survey &amp; quote</h3>
           <p>We assess the work and give you a fixed, written price — no obligation.</p>
         </li>
-        <li class="process__step reveal">
-          <span class="process__num">03</span>
+        <li class="proc__step rv">
+          <span class="proc__n" aria-hidden="true">03</span>
           <h3>Scheduled work</h3>
           <p>Our engineers arrive on time, work cleanly, and keep you updated throughout.</p>
         </li>
-        <li class="process__step reveal">
-          <span class="process__num">04</span>
+        <li class="proc__step rv">
+          <span class="proc__n" aria-hidden="true">04</span>
           <h3>Sign-off &amp; aftercare</h3>
           <p>Certification handed over, site left tidy, and a 5-year guarantee on the work.</p>
         </li>
@@ -316,180 +454,178 @@
     </div>
   </section>
 
-  <!-- Stats -->
-  <section class="stats" id="stats">
-    <div class="wrap stats__grid">
-      <div class="stat reveal">
-        <span class="stat__num" data-count="29">29</span><span class="stat__suffix">yrs</span>
-        <p>Trading in West Yorkshire</p>
-      </div>
-      <div class="stat reveal">
-        <span class="stat__num" data-count="7400">7400</span><span class="stat__suffix">+</span>
-        <p>Jobs completed</p>
-      </div>
-      <div class="stat reveal">
-        <span class="stat__num" data-count="98">98</span><span class="stat__suffix">%</span>
-        <p>Customer satisfaction</p>
-      </div>
-      <div class="stat reveal">
-        <span class="stat__num" data-count="24">24</span><span class="stat__suffix">/7</span>
-        <p>Emergency call-outs</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section class="section" id="projects">
+  <!-- 06 Projects as case files -->
+  <section class="sec sec--alt" id="projects">
     <div class="wrap">
-      <div class="section__head reveal">
-        <p class="eyebrow">Recent projects</p>
+      <div class="sec__head">
         <h2>Recent jobs across West Yorkshire</h2>
+        <p class="sec__meta"><b>06</b><span class="bar" aria-hidden="true"></span>Projects</p>
       </div>
 
-      <div class="project-grid">
-        <article class="project-card reveal">
-          <div class="project-card__top project-card__top--blue">
-            <span class="project-card__tag">Electrical</span>
-          </div>
-          <div class="project-card__body">
-            <h3>Full Rewire &amp; Heating Upgrade</h3>
-            <p class="project-card__loc">Primary School, Leeds</p>
+      <!-- PLACEHOLDER: replace with real, photographed jobs once the owner confirms them -->
+      <ol class="cases">
+        <li class="case case--e rv">
+          <span class="case__n" aria-hidden="true">01</span>
+          <div>
+            <p class="case__tag">Electrical</p>
+            <h3>Full rewire &amp; heating upgrade</h3>
+            <p class="case__loc">Primary school, Leeds</p>
             <p>Complete rewire and new consumer units across a three-block primary school, delivered in stages during term breaks to avoid disruption.</p>
           </div>
-        </article>
-        <article class="project-card reveal">
-          <div class="project-card__top project-card__top--amber">
-            <span class="project-card__tag">Plumbing</span>
-          </div>
-          <div class="project-card__body">
-            <h3>Emergency Leak Repair &amp; Bathroom Refit</h3>
-            <p class="project-card__loc">Commercial Office, Leeds</p>
+          <svg class="case__art" viewBox="0 0 150 96" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+              <rect x="6" y="36" width="32" height="52" rx="3"/>
+              <rect x="44" y="20" width="40" height="68" rx="3"/>
+              <rect x="90" y="44" width="28" height="44" rx="3"/>
+              <path d="M10 30h24M48 14h32M94 38h20"/>
+            </g>
+            <path d="M136 12l-11 21h8l-2 18 12-21h-8z" fill="currentColor"/>
+          </svg>
+        </li>
+        <li class="case case--p rv">
+          <span class="case__n" aria-hidden="true">02</span>
+          <div>
+            <p class="case__tag">Plumbing</p>
+            <h3>Emergency leak repair &amp; bathroom refit</h3>
+            <p class="case__loc">Commercial office, Leeds</p>
             <p>Traced and repaired a hidden mains leak overnight, followed by a full staff bathroom refit the same week.</p>
           </div>
-        </article>
-        <article class="project-card reveal">
-          <div class="project-card__top project-card__top--green">
-            <span class="project-card__tag">EV &amp; Electrical</span>
-          </div>
-          <div class="project-card__body">
-            <h3>EV Charger Rollout</h3>
-            <p class="project-card__loc">Retail Park, Wakefield</p>
+          <svg class="case__art" viewBox="0 0 150 96" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+              <path d="M8 24h58v26h34v30h42"/>
+              <path d="M8 24v16M66 24v16"/>
+              <circle cx="104" cy="62" r="13"/>
+              <path d="M104 49v-6M104 81v-6M91 62h-6M123 62h-6"/>
+            </g>
+            <path d="M120 14c4 5 7 8 7 11a7 7 0 0 1-14 0c0-3 3-6 7-11z" fill="currentColor"/>
+          </svg>
+        </li>
+        <li class="case case--ev rv">
+          <span class="case__n" aria-hidden="true">03</span>
+          <div>
+            <p class="case__tag">EV &amp; electrical</p>
+            <h3>EV charger rollout</h3>
+            <p class="case__loc">Retail park, Wakefield</p>
             <p>Installed 12 fast-charge EV bays across a retail park car park, including supply upgrade and load management.</p>
           </div>
-        </article>
-      </div>
+          <svg class="case__art" viewBox="0 0 150 96" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+              <rect x="14" y="18" width="34" height="56" rx="6"/>
+              <path d="M22 30h18M22 40h18M22 50h10"/>
+              <path d="M48 44h16v22a10 10 0 0 0 10 10h4"/>
+              <circle cx="86" cy="76" r="8"/>
+              <path d="M112 20l-12 23h9l-2 19 13-23h-9z"/>
+            </g>
+            <circle cx="66" cy="30" r="4" fill="currentColor"/>
+          </svg>
+        </li>
+      </ol>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="section section--alt" id="reviews">
+  <!-- 07 Reviews -->
+  <section class="sec" id="reviews">
     <div class="wrap">
-      <div class="section__head reveal">
-        <p class="eyebrow">Reviews</p>
+      <div class="sec__head">
         <h2>What locals say</h2>
+        <p class="sec__meta"><b>07</b><span class="bar" aria-hidden="true"></span>Reviews</p>
       </div>
 
-      <div class="testimonials reveal">
-        <!-- PLACEHOLDER: replace with real Google / Checkatrade reviews, with dates and a link to the source -->
-        <div class="testimonial-track" id="testimonialTrack">
-          <blockquote class="testimonial">
-            <p>“Called at 11pm with a burst pipe, someone was at the door within the hour. Fixed properly, fair price, no drama.”</p>
-            <footer>— Hannah R., Leeds</footer>
-          </blockquote>
-          <blockquote class="testimonial">
-            <p>“Rewired our whole shop overnight so we didn't lose a day of trading. Tidy, professional, and the paperwork was sorted immediately.”</p>
-            <footer>— Marcus T., Wakefield</footer>
-          </blockquote>
-          <blockquote class="testimonial">
-            <p>“Been using them for our landlord certificates for three years. Always on time, always straightforward pricing.”</p>
-            <footer>— Priya S., Property Manager</footer>
-          </blockquote>
-        </div>
-        <!-- /PLACEHOLDER -->
-        <div class="testimonial-dots" id="testimonialDots"></div>
+      <!-- PLACEHOLDER: replace with real Google / Checkatrade reviews, with dates and a link to the source -->
+      <div class="reports">
+        <figure class="report rv">
+          <p class="chip">Demo review</p>
+          <blockquote><p>“Called at 11pm with a burst pipe, someone was at the door within the hour. Fixed properly, fair price, no drama.”</p></blockquote>
+          <figcaption>Hannah R., Leeds</figcaption>
+        </figure>
+        <figure class="report rv">
+          <p class="chip">Demo review</p>
+          <blockquote><p>“Rewired our whole shop overnight so we didn't lose a day of trading. Tidy, professional, and the paperwork was sorted immediately.”</p></blockquote>
+          <figcaption>Marcus T., Wakefield</figcaption>
+        </figure>
+        <figure class="report rv">
+          <p class="chip">Demo review</p>
+          <blockquote><p>“Been using them for our landlord certificates for three years. Always on time, always straightforward pricing.”</p></blockquote>
+          <figcaption>Priya S., Property Manager</figcaption>
+        </figure>
       </div>
+      <!-- /PLACEHOLDER -->
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="section" id="faq">
+  <!-- 08 FAQ -->
+  <section class="sec sec--alt" id="faq">
     <div class="wrap wrap--narrow">
-      <div class="section__head reveal">
-        <p class="eyebrow">FAQ</p>
+      <div class="sec__head">
         <h2>Common questions</h2>
+        <p class="sec__meta"><b>08</b><span class="bar" aria-hidden="true"></span>FAQ</p>
       </div>
 
-      <div class="faq-list reveal">
-        <details class="faq-item" open>
-          <summary>Do you offer 24/7 emergency call-outs?</summary>
+      <div class="faq">
+        <details class="faq__item" open>
+          <summary><span class="faq__num" aria-hidden="true">01</span>Do you offer 24/7 emergency call-outs?<span class="faq__plus" aria-hidden="true"></span></summary>
           <p>Yes — for burst pipes, total power loss and other urgent issues we offer same-day and out-of-hours call-outs across Leeds, Wakefield and surrounding areas.</p>
         </details>
-        <details class="faq-item">
-          <summary>Are your engineers certified and insured?</summary>
+        <details class="faq__item">
+          <summary><span class="faq__num" aria-hidden="true">02</span>Are your engineers certified and insured?<span class="faq__plus" aria-hidden="true"></span></summary>
           <p>All electrical work is carried out by NICEIC-approved engineers and all gas/plumbing work by Gas Safe registered engineers. We carry £5m public liability insurance.</p>
         </details>
-        <details class="faq-item">
-          <summary>Do you provide free quotes?</summary>
+        <details class="faq__item">
+          <summary><span class="faq__num" aria-hidden="true">03</span>Do you provide free quotes?<span class="faq__plus" aria-hidden="true"></span></summary>
           <p>Yes, we provide a free, no-obligation written quote for all non-emergency work before anything is booked in.</p>
         </details>
-        <details class="faq-item">
-          <summary>What areas do you cover?</summary>
+        <details class="faq__item">
+          <summary><span class="faq__num" aria-hidden="true">04</span>What areas do you cover?<span class="faq__plus" aria-hidden="true"></span></summary>
           <p>We're based in Leeds and cover all of West Yorkshire, including Wakefield, Bradford, Huddersfield and surrounding towns.</p>
         </details>
-        <details class="faq-item">
-          <summary>Do you work on commercial premises?</summary>
+        <details class="faq__item">
+          <summary><span class="faq__num" aria-hidden="true">05</span>Do you work on commercial premises?<span class="faq__plus" aria-hidden="true"></span></summary>
           <p>Yes — we run planned maintenance contracts for schools, retail units, offices and leisure sites alongside our residential work.</p>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- CTA banner -->
-  <section class="cta-banner reveal">
-    <div class="wrap cta-banner__inner">
+  <!-- Call banner -->
+  <section class="callband">
+    <div class="wrap callband__in">
       <div>
         <h2>Need an electrician or plumber this week?</h2>
         <p>Get a free, fixed quote — usually within a few hours.</p>
       </div>
-      <div class="cta-banner__actions">
-        <a href="#contact" class="btn btn--accent btn--lg">Get Free Quote</a>
-        <a href="tel:+441134960789" class="btn btn--outline btn--lg">📞 0113 496 0789</a>
+      <div class="callband__act">
+        <a class="btn btn--cta btn--lg" href="tel:+441134960789"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call 0113 496 0789</a>
+        <a class="tlink" href="#contact">Send the form instead <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="section" id="contact">
-    <div class="wrap contact-grid">
-      <div class="reveal">
-        <p class="eyebrow">Get in touch</p>
+  <!-- 09 Contact -->
+  <section class="sec" id="contact">
+    <div class="wrap">
+      <div class="sec__head">
         <h2>Request a free quote</h2>
-        <p class="section__sub">Tell us what you need and we'll get back to you the same working day.</p>
+        <p class="sec__meta"><b>09</b><span class="bar" aria-hidden="true"></span>Contact</p>
+        <p class="sec__sub">Tell us what you need and we'll get back to you the same working day.</p>
+      </div>
 
-        <ul class="quick-contact">
-          <li><a href="tel:+441134960789">📞 Call 0113 496 0789</a></li>
-          <!-- PLACEHOLDER: confirm business address before relying on this directions link -->
-          <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=24+Ironbridge+Way,+Leeds,+LS10+1AB" target="_blank" rel="noopener">📍 Get directions</a></li>
-          <!-- /PLACEHOLDER -->
-          <li><!-- PLACEHOLDER: real opening hours needed -->🕐 Mon–Fri 7:30am–6pm · 24/7 emergency<!-- /PLACEHOLDER --></li>
-        </ul>
-
-        <form class="quote-form" id="quoteForm">
-          <div class="form-row">
+      <div class="contact">
+        <form class="form" id="quoteForm" novalidate>
+          <div class="field">
             <label for="name">Full name</label>
             <input type="text" id="name" name="name" required autocomplete="name" />
           </div>
-          <div class="form-row form-row--split">
-            <div>
+          <div class="field field--split">
+            <div class="field">
               <label for="email">Email</label>
               <input type="email" id="email" name="email" required autocomplete="email" />
             </div>
-            <div>
+            <div class="field">
               <label for="phone">Phone</label>
               <input type="tel" id="phone" name="phone" required autocomplete="tel" />
             </div>
           </div>
-          <div class="form-row">
+          <div class="field">
             <label for="service">Service needed</label>
             <select id="service" name="service" required>
               <option value="" disabled selected>Select a service</option>
@@ -500,32 +636,44 @@
               <option>Something else</option>
             </select>
           </div>
-          <div class="form-row">
+          <div class="field">
             <label for="message">Job details</label>
             <textarea id="message" name="message" rows="4" required></textarea>
           </div>
-          <button type="submit" class="btn btn--accent btn--lg" id="quoteSubmit">Send Request</button>
-          <p class="form-privacy">We use your details only to reply to your enquiry and don't share them with anyone else. <!-- PLACEHOLDER: link to real privacy notice when form submission is built -->Privacy notice available on request.<!-- /PLACEHOLDER --></p>
-          <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+          <button type="submit" class="btn btn--cta btn--lg" id="quoteSubmit">Send request</button>
+          <p class="form__privacy">We use your details only to reply to your enquiry and don't share them with anyone else. <!-- PLACEHOLDER: link to real privacy notice when form submission is built -->Privacy notice available on request.<!-- /PLACEHOLDER --></p>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
         </form>
-      </div>
 
-      <div class="contact-info reveal">
-        <div class="info-card">
-          <h3>Voltage &amp; Valve</h3>
-          <p class="info-card__item">📍 24 Ironbridge Way, Leeds, LS10 1AB · <a href="https://www.google.com/maps/dir/?api=1&amp;destination=24+Ironbridge+Way,+Leeds,+LS10+1AB" target="_blank" rel="noopener">Directions</a></p>
-          <p class="info-card__item">📞 <a href="tel:+441134960789">0113 496 0789</a></p>
-          <p class="info-card__item">✉️ <a href="mailto:hello@voltage-and-valve.example">hello@voltage-and-valve.example</a></p>
-          <p class="info-card__item">🕐 Mon–Fri 7:30am–6pm · Emergency line 24/7</p>
-          <p class="info-card__item">🗺️ Areas covered: Leeds, Wakefield, Bradford, Huddersfield and nearby</p>
-        </div>
-        <div class="map-embed" id="mapEmbed" data-map-src="https://www.openstreetmap.org/export/embed.html?bbox=-1.6700%2C53.7500%2C-1.4400%2C53.8600&amp;layer=mapnik&amp;marker=53.8008%2C-1.5491" data-map-title="Map of the Leeds service area">
-          <div class="map-facade">
-            <p class="map-facade__name">Voltage &amp; Valve</p>
-            <p class="map-facade__addr">24 Ironbridge Way, Leeds, LS10 1AB</p>
-            <div class="map-facade__actions">
-              <button type="button" class="btn btn--accent map-facade__btn">Show map</button>
-              <a class="map-facade__link" href="https://www.google.com/maps/search/?api=1&amp;query=Voltage+%26+Valve+Leeds" target="_blank" rel="noopener">Get directions</a>
+        <div class="info">
+          <div class="info__card">
+            <h3>Voltage &amp; Valve</h3>
+            <ul class="info__list">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span>24 Ironbridge Way, Leeds, LS10 1AB · <a href="https://www.google.com/maps/dir/?api=1&amp;destination=24+Ironbridge+Way,+Leeds,+LS10+1AB" target="_blank" rel="noopener">Directions</a></span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span><a href="tel:+441134960789">0113 496 0789</a></span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg><span><a href="mailto:hello@voltage-and-valve.example">hello@voltage-and-valve.example</a></span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-map"/></svg><span>Areas covered: Leeds, Wakefield, Bradford, Huddersfield and nearby</span></li>
+            </ul>
+          </div>
+
+          <div class="info__card">
+            <h3>Opening hours</h3>
+            <!-- PLACEHOLDER: real opening hours needed -->
+            <div class="info__hours">
+              <div><b>Monday – Friday</b><span>7:30am – 6pm</span></div>
+              <div><b>Emergency line</b><span>24 hours, 7 days</span></div>
+            </div>
+            <!-- /PLACEHOLDER -->
+          </div>
+
+          <div class="map" id="mapEmbed" data-map-src="https://www.openstreetmap.org/export/embed.html?bbox=-1.6700%2C53.7500%2C-1.4400%2C53.8600&amp;layer=mapnik&amp;marker=53.8008%2C-1.5491" data-map-title="Map of the Leeds service area">
+            <div class="map__facade">
+              <p class="map__name">Voltage &amp; Valve</p>
+              <p class="map__addr">24 Ironbridge Way, Leeds, LS10 1AB</p>
+              <div class="map__actions">
+                <button type="button" class="btn btn--ghost map__btn">Show map</button>
+                <a class="tlink" href="https://www.google.com/maps/search/?api=1&amp;query=Voltage+%26+Valve+Leeds" target="_blank" rel="noopener">Get directions</a>
+              </div>
             </div>
           </div>
         </div>
@@ -535,35 +683,35 @@
 
 </main>
 
-<!-- Footer -->
-<footer class="site-footer">
-  <div class="wrap footer__grid">
-    <div>
-      <span class="brand brand--footer">
-        <span class="brand__mark" aria-hidden="true">
-          <svg viewBox="0 0 48 48" width="28" height="28">
-            <path d="M26 2 8 26h12l-4 20 22-26H26z" fill="#4da3ff"/>
-          </svg>
-        </span>
-        <span class="brand__text">Voltage<span class="brand__amp">&amp;</span>Valve</span>
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div class="foot__brand">
+      <span class="brand">
+        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <path d="M23 4 10.5 21.5H18L16 36 29 18h-7.5z" fill="currentColor"/>
+          <path d="M6 33.5h6M28 33.5h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".75"/>
+          <circle cx="20" cy="33.5" r="3.4" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <span class="brand__name">Voltage<span class="brand__amp">&amp;</span>Valve</span>
       </span>
-      <p class="footer__about">Certified electricians and plumbers serving West Yorkshire homes and businesses since 1997.</p>
+      <p class="foot__about">Certified electricians and plumbers serving West Yorkshire homes and businesses since 1997.</p>
     </div>
 
     <div>
-      <p class="footer__title">Services</p>
+      <p class="foot__title">Services</p>
       <ul>
-        <li><a href="#services">Electrical Services</a></li>
-        <li><a href="#services">Plumbing Services</a></li>
-        <li><a href="#services">Planned Maintenance</a></li>
+        <li><a href="#services">Electrical services</a></li>
+        <li><a href="#services">Plumbing services</a></li>
+        <li><a href="#services">Planned maintenance</a></li>
+        <li><a href="#landlords">Landlord certificates</a></li>
       </ul>
     </div>
 
     <div>
-      <p class="footer__title">Company</p>
+      <p class="foot__title">Company</p>
       <ul>
-        <li><a href="#why-us">Why Us</a></li>
-        <li><a href="#landlords">Landlord certificates</a></li>
+        <li><a href="#why-us">Why us</a></li>
+        <li><a href="#certification">Certification</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -571,27 +719,33 @@
     </div>
 
     <div>
-      <p class="footer__title">Contact</p>
+      <p class="foot__title">Contact</p>
+      <p class="foot__addr">24 Ironbridge Way, Leeds, LS10 1AB</p>
+      <p class="foot__hours">Mon–Fri 7:30am–6pm · 24/7 emergency line</p>
       <ul>
         <li><a href="tel:+441134960789">0113 496 0789</a></li>
         <li><a href="mailto:hello@voltage-and-valve.example">hello@voltage-and-valve.example</a></li>
-        <li>24 Ironbridge Way, Leeds, LS10 1AB</li>
         <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=24+Ironbridge+Way,+Leeds,+LS10+1AB" target="_blank" rel="noopener">Get directions</a></li>
+        <li><a href="#contact">Request a quote</a></li>
       </ul>
     </div>
   </div>
 
-  <div class="wrap footer__bottom">
-    <p>© <span id="year">2026</span> Voltage &amp; Valve Trade Services Ltd. All rights reserved. · <a href="privacy.html">Privacy notice</a></p>
+  <div class="wrap foot__legal">
+    <p>© <span id="year">2026</span> Voltage &amp; Valve Trade Services Ltd. · <a href="privacy.html">Privacy notice</a></p>
     <!-- PLACEHOLDER: confirm registrations before pitching -->
-    <p>NICEIC Approved · Gas Safe Registered · Fully Insured</p>
+    <p>NICEIC approved · Gas Safe registered · Fully insured</p>
     <!-- /PLACEHOLDER -->
-    <p class="footer__demo">Demo website — Voltage &amp; Valve is a fictional business.</p>
+    <p class="foot__demo">Demo website — Voltage &amp; Valve is a fictional business.</p>
   </div>
+
+  <p class="foot__mark" aria-hidden="true">Voltage &amp; Valve</p>
 </footer>
 
-<a href="tel:+441134960789" class="fab-call" aria-label="Call Voltage and Valve now">📞</a>
-<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+<div class="callbar">
+  <a class="btn btn--cta" href="tel:+441134960789"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call 0113 496 0789</a>
+</div>
+<button class="totop" id="backToTop" type="button" aria-label="Back to top"><svg class="ico" aria-hidden="true"><use href="#i-up"/></svg></button>
 
 <script src="js/script.js"></script>
 </body>
